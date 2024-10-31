@@ -10,39 +10,40 @@
     <div class="calculator">
         <table border="1px solid black" >
             <tr>
-                <td colspan="4" style="text-align: right;border-radius: 0%;">2+2</td>
+                <td colspan="4" style="text-align: right;border-radius: 0%;"><input style="width: 100%; height: 100%;" type="text" id="display"></td>
             </tr>
             <tr>
-                <td style="background-color: var(--gray);">AC</td>
-                <td style="background-color: var(--gray);">DEL</td>
+                <td style="background-color: var(--gray);" onclick="ac()">AC</td>
+                <td style="background-color: var(--gray);" onclick="Del()">DEL</td>
                 <td style="background-color: var(--gray);">%</td>
                 <td style="background-color: var(--orange);">J</td>
             </tr>
             <tr>
-                <td style="background-color: var(--light);">7</td>
-                <td style="background-color: var(--light);">8</td>
-                <td style="background-color: var(--light);">9</td>
-                <td style="background-color: var(--orange);">*</td>
+                <td style="background-color: var(--light);" onclick="number(('7'))">7</td>
+                <td style="background-color: var(--light);" onclick="number(('8'))">8</td>
+                <td style="background-color: var(--light);" onclick="number(('9'))">9</td>
+                <td style="background-color: var(--orange);" onclick="number(('*'))">*</td>
             </tr>
             <tr>
-                <td style="background-color: var(--light);">4</td>
-                <td style="background-color: var(--light);">5</td>
-                <td style="background-color: var(--light);">6</td>
-                <td style="background-color: var(--orange);">-</td>
+                <td style="background-color: var(--light);" onclick="number(('4'))">4</td>
+                <td style="background-color: var(--light);" onclick="number(('5'))">5</td>
+                <td style="background-color: var(--light);" onclick="number(('6'))">6</td>
+                <td style="background-color: var(--orange);" onclick="number(('-'))">-</td>
             </tr>
             <tr>
-                <td style="background-color: var(--light);">1</td>
-                <td style="background-color: var(--light);">2</td>
-                <td style="background-color: var(--light);">3</td>
-                <td style="background-color: var(--orange);">+</td>
+                <td style="background-color: var(--light);" onclick="number(('1'))">1</td>
+                <td style="background-color: var(--light);"onclick="number(('2'))">2</td>
+                <td style="background-color: var(--light);"onclick="number(('3'))">3</td>
+                <td style="background-color: var(--orange);"onclick="number(('+'))">+</td>
             </tr>
             <tr>
-                <td style="background-color: var(--light);" colspan="2">0</td>
+                <td style="background-color: var(--light);" colspan="2"onclick="number(('0'))">0</td>
                 <td style="background-color: var(--light);">.</td>
-                <td style="background-color: var(--orange);">=</td>
+                <td style="background-color: var(--orange);" onclick="calculate()">=</td>
           
             </tr>
         </table>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>
