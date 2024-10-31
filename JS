@@ -1,57 +1,30 @@
-let currentInput = '';
-let previousInput = '';
-let operation = '';
+let globalNum;
+var display = document.getElementById('display');
+function number(val) {
+     globalNum =document.getElementById('display')
+     
+     display.value += val;
+   
+    
+  }
 
-function appendToDisplay(value) {
-    currentInput += value;
-    updateDisplay();
-}
-
-function setOperation(op) {
-    if (currentInput === '') return;
-    if (previousInput !== '') calculate();
-    operation = op;
-    previousInput = currentInput;
-    currentInput = '';
-    updateDisplay();
-}
-
-function calculate() {
-    let result;
-    const prev = parseFloat(previousInput);
-    const current = parseFloat(currentInput);
-    if (isNaN(prev) || isNaN(current)) return;
-
-    switch (operation) {
-        case '+':
-            result = prev + current;
-            break;
-        case '-':
-            result = prev - current;
-            break;
-        case '*':
-            result = prev * current;
-            break;
-        case '/':
-            result = prev / current;
-            break;
-        default:
-            return;
+  function calculate() {
+    // var globalNum = document.getElementById('display').value;
+    // console.log(eval(globalNum));
+    var cal = display.value;
+    display.value = eval(display.value)
+    
+    
+    }
+  function ac() {
+    
+    display.value = ""
     }
 
-    currentInput = result;
-    operation = '';
-    previousInput = '';
-    updateDisplay();
-}
-
-function clearDisplay() {
-    currentInput = '';
-    previousInput = '';
-    operation = '';
-    updateDisplay();
-}
-
-function updateDisplay() {
-    document.getElementById('display').value = currentInput || previousInput || '0';
-}
+    function Del() {
+        var c = globalNum.value.slice("0","-1");
+        display.value = c
+        
+        
+        
+      }
